@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -15,7 +15,7 @@
         android:layout_marginTop="36dp"
         android:text="Mencari Lagu di Spotify"
         android:textColor="#2E8B57"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,13 +25,14 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="3:2"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintBottom_toTopOf="@+id/searchInputLayout"
-        app:srcCompat="@drawable/musik"
-        android:scaleType="fitCenter" />
+        app:layout_constraintHeight_percent="0.25"
+        app:srcCompat="@drawable/musik" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchInputLayout"

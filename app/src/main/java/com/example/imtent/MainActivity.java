@@ -4,15 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.media.MediaPlayer;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MediaPlayer mediaPlayer;
-    private boolean isPlaying = false; // Status pemutaran musik
     private EditText searchEditText; // EditText untuk mencari lagu
 
     @Override
@@ -39,15 +36,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Masukkan nama lagu untuk mencari", Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        // Melepaskan MediaPlayer jika aktif
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
     }
 }
